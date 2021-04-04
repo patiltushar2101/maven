@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"cd src && cd backend && py manage.py runserver \" \"yarn build\""
+    "dev": "concurrently \"cd src && cd backend && py manage.py runserver \" \"npm start\""
   },
   "eslintConfig": {
     "extends": [
