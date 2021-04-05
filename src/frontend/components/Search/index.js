@@ -7,16 +7,20 @@ let data;
 
 export default function Search() {
 
-  function handleChange(e){
-    axios.get("http://localhost:8000/")
-            .then((res) => {
-                data = res.data;
-                console.log({data});
-                this.setState({
-                    details: data,
-                });
-            })
-            .catch((err) => {console.log("err")});
+  function handleChange(e) {
+    axios.get("http://localhost:8000/searchPageData/")
+      .then((res) => {
+        data = res.data;
+        console.log({ data });
+        this.setState({
+          details: data,
+        });
+      })
+      .catch((error) => {
+        if (error.response) {
+          console.log(error.response);
+        }
+      });
 
   }
 
