@@ -9,7 +9,6 @@ export default function Homepage() {
     <div className="Searchpage">
       <Header></Header>
       <Searchpage></Searchpage>
-
       <Footer></Footer>
     </div>
   );

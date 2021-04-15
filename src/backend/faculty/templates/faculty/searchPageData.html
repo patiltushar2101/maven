@@ -3,13 +3,15 @@
 {% block content %}
 {% for d in data %}
 <a href="{% url 'searchGetData' k=d.id %}">
-    <p> {{d.user}}
-        {{d.name}} {{d.email}}
-        {{d.department}}
-        {{d.inst_name}}
-        {{d.courses}}
-        {{d.education}}
-        {{d.photo}}</p><br><br><br>
+    <p>{{d}}</p>
+    <p> {{d.user}}</p>
+    <p class="user-name"> {{d.name}} </p>
+    <p> {{d.email}}</p>
+    <p> {{d.department}}</p>
+    <p> {{d.inst_name}}</p>
+    <p> {{d.courses}}</p>
+    <p> {{d.education}}</p>
+    <p> {{d.photo}}</p><br><br><br>
 </a>
 {% endfor %}
 {% for i in page %}

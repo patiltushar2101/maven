@@ -21,7 +21,7 @@ export default function App() {
         <Route path="/Login" exact component={Login} />
         <Route path="/CreateAccount" exact component={CreateAccount} />
         <Route path="/Searchpage" exact component={Searchpage} />
-        <Route path="/AboutProf" exact component={AboutProf} />
+        <Route path="/AboutProf/:name" exact component={AboutProf} />
       </div>
     </BrowserRouter>
   );

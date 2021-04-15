@@ -5,40 +5,6 @@ export default function ProfileCard(props) {
   const [e, setE] = useState(false);
   const [c, setC] = useState(false);
 
-  // const about = `about${props.x}`;
-  // const aboutId = `#${about}`;
-  // const contact = `contact${props.x}`;
-  // const contactId = `#${contact}`;
-  // const experience = `experience${props.x}`;
-  // const experienceId = `#${experience}`;
-
-  // const buttons = document.querySelectorAll(".card-buttons button");
-
-  // const sections = document.querySelectorAll(".card-section");
-
-  // const handleButtonClick = (e) => {
-  //   const targetSection = e.target.getAttribute("data-section");
-  //   const card = document.querySelector(".card");
-  //   const section = document.querySelector(targetSection);
-
-  //   targetSection !== aboutId
-  //     ? card.classList.add("is-active")
-  //     : card.classList.remove("is-active");
-
-  //   card.setAttribute("data-state", targetSection);
-  //   sections.forEach((s) => s.classList.remove("is-active"));
-
-  //   buttons.forEach((b) => b.classList.remove("is-active"));
-
-  //   e.target.classList.add("is-active");
-
-  //   section.classList.add("is-active");
-  // };
-
-  // function func() {
-  //   // console.log({ card });
-  // }
-
   return (
     <div
       className={"card " + (a ? "is-active" : "") + (a ? "" : " top-sm")}
@@ -53,7 +19,7 @@ export default function ProfileCard(props) {
           alt="avatar"
         />
 
-        <h1 className="card-fullname">Seotechman</h1>
+        <h1 className="card-fullname">{props.name}</h1>
 
         <h2 className="card-jobtitle">UI Developer / Blogger</h2>
       </div>
@@ -103,7 +69,7 @@ export default function ProfileCard(props) {
               </svg>
             </a>
 
-            <a href="/AboutProf" className="btn-full">
+            <a href={'/AboutProf' + '/' + props.name} className="btn-full">
               Full Profile
             </a>
           </div>

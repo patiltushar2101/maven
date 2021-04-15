@@ -5,9 +5,10 @@ import AboutProf from "../components/AboutProf";
 import "./styles.css"
 
 
-export default function Homepage() {
+export default function Homepage(props) {
   return (
     <div className="AboutProf">
+      <h1>{props.match.params.name}</h1>
       <Header></Header>
       <AboutProf></AboutProf>
       <Footer></Footer>

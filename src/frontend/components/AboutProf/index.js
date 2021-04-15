@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from 'axios';
 import "./styles.css";
 export default function ProfileCard(props) {
   const [a, setA] = useState(true);
@@ -9,39 +10,32 @@ export default function ProfileCard(props) {
   const [cr, setCr] = useState(false);
   const [ac, setAc] = useState(false);
 
-  // const about = `about${props.x}`;
-  // const aboutId = `#${about}`;
-  // const contact = `contact${props.x}`;
-  // const contactId = `#${contact}`;
-  // const experience = `experience${props.x}`;
-  // const experienceId = `#${experience}`;
+  let data;
 
-  // const buttons = document.querySelectorAll(".card-buttons button");
+  const [userName, setUserName] = useState("");
 
-  // const sections = document.querySelectorAll(".card-section");
+  var stringToHTML = function (str) {
+    var parser = new DOMParser();
+    var doc = parser.parseFromString(str, 'text/html');
+    return doc.body;
+  };
 
-  // const handleButtonClick = (e) => {
-  //   const targetSection = e.target.getAttribute("data-section");
-  //   const card = document.querySelector(".card");
-  //   const section = document.querySelector(targetSection);
+  axios.get("http://localhost:8000/searchPageData/0")
+    .then((res) => {
+      data = res.data;
 
-  //   targetSection !== aboutId
-  //     ? card.classList.add("is-active")
-  //     : card.classList.remove("is-active");
+      data = stringToHTML(data);
 
-  //   card.setAttribute("data-state", targetSection);
-  //   sections.forEach((s) => s.classList.remove("is-active"));
+      let x = data.querySelector(".user-name").innerHTML;
+      console.log(x);
+      setUserName(x);
+    })
+    .catch((error) => {
+      if (error.response) {
+        console.log(error.response);
+      }
+    });
 
-  //   buttons.forEach((b) => b.classList.remove("is-active"));
-
-  //   e.target.classList.add("is-active");
-
-  //   section.classList.add("is-active");
-  // };
-
-  // function func() {
-  //   // console.log({ card });
-  // }
 
   return (
     <div className="proff-card">
@@ -58,7 +52,7 @@ export default function ProfileCard(props) {
             alt="avatar"
           />
 
-          <h1 className="card-fullname">Seotechman</h1>
+          <h1 className="card-fullname">{userName}</h1>
 
           <h2 className="card-jobtitle">UI Developer / Blogger</h2>
         </div>
