@@ -8,6 +8,7 @@ import Login from "./frontend/pages/Login";
 import CreateAccount from "./frontend/pages/CreateAccount";
 import Searchpage from "./frontend/pages/Searchpage";
 import AboutProf from "./frontend/pages/AboutProf";
+import UpdateProfile from "./frontend/pages/UpdateProfile";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AuthProvider } from "./frontend/contexts/AuthContext"
 import ForgotPassword from "./frontend/pages/ForgotPassword.js";
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/Searchpage" exact component={Searchpage} />
           <Route path="/AboutProf/:name" exact component={AboutProf} />
           <Route path="/forgot-password" exact component={ForgotPassword} />
+          <Route path="/update-profile" exact component={UpdateProfile} />
         </div>
       </AuthProvider>
     </BrowserRouter>

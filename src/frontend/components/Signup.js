@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import { db } from '../../firebase.js';
 
 export default function Signup() {
   const emailRef = useRef()
@@ -11,6 +12,27 @@ export default function Signup() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
+
+  function addProftoDatabase() {
+    db.collection("Prof").doc(emailRef.current.value).set({
+      email: emailRef.current.value,
+      name: "",
+      university: "",
+      achievements: [],
+      specialization: [],
+      contact: "",
+      experience: [],
+      publication: [],
+      courses: [],
+    })
+      .then(() => {
+        console.log("Document successfully written!");
+      })
+      .catch((error) => {
+        console.error("Error writing document: ", error);
+      });
+
+  }
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -23,6 +45,7 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
+      addProftoDatabase()
       history.push("/")
     } catch {
       setError("Failed to create an account")
