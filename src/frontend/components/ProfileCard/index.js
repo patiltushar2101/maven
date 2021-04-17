@@ -69,7 +69,7 @@ export default function ProfileCard(props) {
               </svg>
             </a>
 
-            <a href={'/AboutProf' + '/' + props.name} className="btn-full">
+            <a href={'/AboutProf/' + props.name} className="btn-full">
               Full Profile
             </a>
           </div>

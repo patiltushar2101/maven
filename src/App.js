@@ -9,20 +9,25 @@ import CreateAccount from "./frontend/pages/CreateAccount";
 import Searchpage from "./frontend/pages/Searchpage";
 import AboutProf from "./frontend/pages/AboutProf";
 import { BrowserRouter, Route } from "react-router-dom";
+import { AuthProvider } from "./frontend/contexts/AuthContext"
+import ForgotPassword from "./frontend/pages/ForgotPassword.js";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-        <Route path="/" exact component={Homepage} />
-        <Route path="/web" exact component={Websitepage} />
-        <Route path="/ContactUs" exact component={ContactUs} />
-        <Route path="/AboutUs" exact component={AboutUs} />
-        <Route path="/Login" exact component={Login} />
-        <Route path="/CreateAccount" exact component={CreateAccount} />
-        <Route path="/Searchpage" exact component={Searchpage} />
-        <Route path="/AboutProf/:name" exact component={AboutProf} />
-      </div>
+      <AuthProvider>
+        <div className="App">
+          <Route path="/" exact component={Homepage} />
+          <Route path="/web" exact component={Websitepage} />
+          <Route path="/ContactUs" exact component={ContactUs} />
+          <Route path="/AboutUs" exact component={AboutUs} />
+          <Route path="/Login" exact component={Login} />
+          <Route path="/CreateAccount" exact component={CreateAccount} />
+          <Route path="/Searchpage" exact component={Searchpage} />
+          <Route path="/AboutProf/:name" exact component={AboutProf} />
+          <Route path="/forgot-password" exact component={ForgotPassword} />
+        </div>
+      </AuthProvider>
     </BrowserRouter>
   );
 }

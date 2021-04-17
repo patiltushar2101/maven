@@ -1,5 +1,5 @@
 import Header from "../components/Header";
-import CreateAccount from "../components/CreateAccount";
+import Signup from "../components/Signup.js";
 import Footer from "../components/Footer";
 
 import "./styles.css"
@@ -8,7 +8,7 @@ export default function ContactUs() {
   return (
     <div className="CreateAccount">
       <Header></Header>
-      <CreateAccount></CreateAccount>
+      <Signup></Signup>
       <Footer></Footer>
     </div>
   );
