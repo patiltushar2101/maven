@@ -2,7 +2,7 @@ import React from "react";
 import "./styles.css";
 
 export default function Login() {
-   return (
+  return (
     <div className="log-in">
       <div className="log-img">
         <img
@@ -16,7 +16,7 @@ export default function Login() {
           <h2>Login</h2>
 
           <form action="/action_page.php" method="post">
-            <div className="container">
+            <div className="">
               <label for="email">
                 <b>Username</b>
               </label>

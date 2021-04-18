@@ -5,14 +5,13 @@ export default function Contact() {
   return (
     <div className="conact-form">
       <div className="subpageTitle u-bg10">
-        <div className="container">
+        <div className="">
           <h1 className="text-uppercase">Contact Us</h1>
         </div>
       </div>
-      <div className="container">
-        <div className="row">
+      <div className="">
+        <div>
           <div
-            className="col-sm-8 col-sm-push-4 col-md-7 col-md-push-5 col-lg-8 col-lg-push-4"
             id="mainContent"
           >
             <form
@@ -22,8 +21,8 @@ export default function Contact() {
               action="/contact-us/index.stml"
             >
               <div className="contactForm">
-                <div className="row">
-                  <div className="col-md-6">
+                <div>
+                  <div>
                     <div className="form-group icon-1">
                       <label className="control-label sr-only" htmlFor="firstName">
                         First Name
@@ -80,7 +79,7 @@ export default function Contact() {
                       />
                     </div>
                   </div>
-                  <div className="col-md-6">
+                  <div>
                     <div className="form-group">
                       <label className="control-label sr-only" htmlFor="comments">
                         Your Message
@@ -97,7 +96,7 @@ export default function Contact() {
                     <input
                       type="submit"
                       value="SUBMIT"
-                      className="btn btn-primary btn-block"
+                      className="btn btn-primary mt-2 mb-4"
                     />
                   </div>
                 </div>
@@ -106,7 +105,6 @@ export default function Contact() {
           </div>
 
           <div
-            className="col-sm-4 col-sm-pull-8 col-md-5 col-md-pull-7 col-lg-4 col-lg-pull-8 pageSidebar"
             id="leftSideNav"
           >
             <ul className="sidebar-widget list-group u-paddingTop30">
@@ -114,7 +112,7 @@ export default function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.497563754517!2d72.62677371497078!3d23.188530984869374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2a3c9618d2c5%3A0xc54de484f986b1fa!2sDA-IICT!5e0!3m2!1sen!2sin!4v1616443820014!5m2!1sen!2sin"
                 width="600"
                 height="450"
-                allowFullScreen=""
+                allowFullScreen="true"
                 loading="lazy"
                 title="map"
                 className="map"

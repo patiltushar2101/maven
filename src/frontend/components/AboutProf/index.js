@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from 'axios';
 import "./styles.css";
 export default function ProfileCard(props) {
   const [a, setA] = useState(true);
@@ -9,33 +8,6 @@ export default function ProfileCard(props) {
   const [p, setP] = useState(false);
   const [cr, setCr] = useState(false);
   const [ac, setAc] = useState(false);
-
-  let data;
-
-  const [userName, setUserName] = useState("");
-
-  var stringToHTML = function (str) {
-    var parser = new DOMParser();
-    var doc = parser.parseFromString(str, 'text/html');
-    return doc.body;
-  };
-
-  axios.get("http://localhost:8000/searchPageData/0")
-    .then((res) => {
-      data = res.data;
-
-      data = stringToHTML(data);
-
-      let x = data.querySelector(".user-name").innerHTML;
-      console.log(x);
-      setUserName(x);
-    })
-    .catch((error) => {
-      if (error.response) {
-        console.log(error.response);
-      }
-    });
-
 
   return (
     <div className="proff-card">
@@ -52,7 +24,7 @@ export default function ProfileCard(props) {
             alt="avatar"
           />
 
-          <h1 className="card-fullname">{userName}</h1>
+          <h1 className="card-fullname">Tushar Patil</h1>
 
           <h2 className="card-jobtitle">UI Developer / Blogger</h2>
         </div>

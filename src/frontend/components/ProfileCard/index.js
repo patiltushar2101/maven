@@ -10,7 +10,7 @@ export default function ProfileCard(props) {
       className={"card " + (a ? "is-active" : "") + (a ? "" : " top-sm")}
       data-state="#about"
     >
-      <div className="card-header">
+      <div className="card-header d-flex">
         <div className="card-cover"></div>
 
         <img

@@ -5,7 +5,7 @@ export default function About() {
   return (
     <div className="about">
       <div className="jumbotron jumbotron-fluid text-white">
-        <div className="container" align="center">
+        <div className="" align="center">
           <h1 className="display-4">Our Mission</h1>
           <p className="lead">
             Reinventing online shopping by enabling collaboration and empowering
@@ -14,16 +14,16 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container">
-        <div className="m-5 row" align="center">
-          <div className="col-12 mb-4 mt-2 mx-auto" align="center">
-            <h2 className="text-primary">Our Beliefs</h2>
-          </div>
-          <div className="col-md-4 col-12">
+      <div className="">
+        <div className="mb-4 d-flex justify-content-center mt-2 mx-auto" align="center">
+          <h2 className="text-primary">Our Beliefs</h2>
+        </div>
+        <div className="m-5" align="center">
+          <div className="">
             <h5>Collaboration is power</h5>
             <img
               src="https://image.flaticon.com/icons/svg/265/265663.svg"
-              width="50%"
+              width="20%"
               alt="img"
             ></img>
             <p>
@@ -32,11 +32,11 @@ export default function About() {
               our way to building a happier and healthier society.{" "}
             </p>
           </div>
-          <div className="col-md-4 col-12">
+          <div className="">
             <h5>Planning ahead</h5>
             <img
               src="https://image.flaticon.com/icons/svg/1006/1006534.svg"
-              width="50%"
+              width="20%"
               alt="img"
             ></img>
             <p>
@@ -45,11 +45,11 @@ export default function About() {
               If you plan ahead, you can find a lot more options and deals.{" "}
             </p>
           </div>
-          <div className="col-md-4 col-12">
+          <div className="">
             <h5>Customer is king</h5>
             <img
               src="https://image.flaticon.com/icons/svg/265/265668.svg"
-              width="50%"
+              width="20%"
               alt="img"
             ></img>
             <p>
@@ -60,12 +60,12 @@ export default function About() {
           </div>
         </div>
 
-        <div className="row">
-          <div className="col-12 p-5 m-5 mx-auto" align="center">
+        <div className="x">
+          <div className="p-5 m-5 mx-auto" align="center">
             <h2 className="text-primary">Why We Do It</h2>
           </div>
 
-          <div className="col-md-6 px-5">
+          <div className="px-5">
             <p>
               We believe individuals and small businesses are strengthened by
               coordinating with others. We value small business and the family
@@ -87,7 +87,7 @@ export default function About() {
               share hobbies, or preparing for emergencies.
             </p>
           </div>
-          <div className="col-md-6" align="center">
+          <div className="" align="center">
             <img
               src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1%auto=format%fit=crop%w=774%q=80"
               width="60%"
@@ -98,7 +98,7 @@ export default function About() {
       </div>
 
       <div className="jumbotron jumbotron-fluid bg-light text-black">
-        <div className="container" align="center">
+        <div className="" align="center">
           <h3>Have More Questions?</h3>
           <a
             className="btn btn-outline-primary"
