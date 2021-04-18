@@ -19,14 +19,14 @@ export default function ForgotPassword() {
       setLoading(true)
       await resetPassword(emailRef.current.value)
       setMessage("Check your inbox for further instructions")
-    } catch {
-      setError("Failed to reset password")
+    } catch (err) {
+      setError(err.message)
     }
     setLoading(false)
   }
 
   return (
-    <div className="w-100 d-flex justify-content-center">
+    <div className="w-100 d-flex justify-content-center" style={{ margin: "30px" }}>
       <div>
         <h2 className="text-center mb-4">Password Reset</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -41,7 +41,7 @@ export default function ForgotPassword() {
             </Button>
         </Form>
         <div className="w-100 text-center mt-3">
-          <Link to="/login">Login</Link>
+          <Link to="/login" className="border border-primary rounded">Login</Link>
         </div>
 
         <div className="w-100 text-center mt-2">

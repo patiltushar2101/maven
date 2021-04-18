@@ -20,16 +20,18 @@ export default function Login() {
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
       history.push("/")
-    } catch {
-      setError("Failed to log in")
+    } catch (err) {
+      setError(err.message)
     }
 
     setLoading(false)
   }
 
   return (
-    <div className="w-100 d-flex justify-content-center">
-      <div>
+    <div className="w-100 d-flex justify-content-center" style={{
+      marginTop: "30px"
+    }}>
+      <div className="border">
         <h2 className="text-center mb-4">Log In</h2>
         {error && <Alert variant="danger">{error}</Alert>}
         <Form onSubmit={handleSubmit}>
@@ -53,6 +55,6 @@ export default function Login() {
           Need an account? <Link to="/CreateAccount">Sign Up</Link>
         </div>
       </div>
-    </div>
+    </div >
   )
 }

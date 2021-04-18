@@ -47,14 +47,14 @@ export default function Signup() {
       await signup(emailRef.current.value, passwordRef.current.value)
       addProftoDatabase()
       history.push("/")
-    } catch {
-      setError("Failed to create an account")
+    } catch (err) {
+      setError(err.message)
     }
     setLoading(false)
   }
 
   return (
-    <div className="w-100 d-flex justify-content-center">
+    <div className="w-100 d-flex justify-content-center" >
       <div className="border">
         <h2 className="mb-4 mt-4">Sign Up</h2>
         {error && <Alert variant="danger">{error}</Alert>}
