@@ -5,6 +5,7 @@ export default function ProfileCard(props) {
   const [e, setE] = useState(false);
   const [c, setC] = useState(false);
 
+
   return (
     <div
       className={"card " + (a ? "is-active" : "") + (a ? "" : " top-sm")}
@@ -21,7 +22,7 @@ export default function ProfileCard(props) {
 
         <h1 className="card-fullname">{props.name}</h1>
 
-        <h2 className="card-jobtitle">UI Developer / Blogger</h2>
+        <h2 className="card-jobtitle">{props.prof}</h2>
       </div>
 
       <div className="card-main">
@@ -35,8 +36,7 @@ export default function ProfileCard(props) {
             <div className="card-subtitle">ABOUT</div>
 
             <p className="card-desc">
-              Whatever tattooed stumptown art party sriracha gentrify hashtag
-              intelligentsia readymade schlitz brooklyn disrupt.
+              {props.about}
             </p>
           </div>
 
@@ -84,47 +84,19 @@ export default function ProfileCard(props) {
           <div className="card-content">
             <div className="card-subtitle">WORK EXPERIENCE</div>
 
-            <div className="card-timeline">
-              <div className="card-item" data-year="2014">
-                <div className="card-item-title">
-                  Front-end Developer at <span>JotForm</span>
+            {console.log(props.exp)}
+            {props.exp && props.exp.map((d, i) => {
+              return (
+                <div key={i} className="card-timeline">
+                  <div className="card-item" data-year="2014">
+                    <div className="card-item-title">
+                      {d}
+                    </div>
+                  </div>
                 </div>
+              );
+            })}
 
-                <div className="card-item-desc">
-                  Disrupt stumptown retro everyday carry unicorn.
-                </div>
-              </div>
-
-              <div className="card-item" data-year="2016">
-                <div className="card-item-title">
-                  UI Developer at <span>GitHub</span>
-                </div>
-
-                <div className="card-item-desc">
-                  Developed new conversion funnels and disrupt.
-                </div>
-              </div>
-
-              <div className="card-item" data-year="2018">
-                <div className="card-item-title">
-                  Illustrator at <span>Google</span>
-                </div>
-
-                <div className="card-item-desc">
-                  Onboarding illustrations for App.
-                </div>
-              </div>
-
-              <div className="card-item" data-year="2020">
-                <div className="card-item-title">
-                  Full-Stack Developer at <span>CodePen</span>
-                </div>
-
-                <div className="card-item-desc">
-                  Responsible for the encomposing brand expreience.
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -152,7 +124,7 @@ export default function ProfileCard(props) {
 
                   <circle cx="12" cy="10" r="3" />
                 </svg>
-                Jalan Mandor Naiman, Bogor, 16710
+                {props.address}
               </div>
 
               <div className="card-contact">
@@ -167,7 +139,7 @@ export default function ProfileCard(props) {
                 >
                   <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                 </svg>
-                (+62) 8569478xxxx
+                {props.mobile}
               </div>
 
               <div className="card-contact">
@@ -184,7 +156,7 @@ export default function ProfileCard(props) {
 
                   <path d="M22 6l-10 7L2 6" />
                 </svg>
-                contact@seotechman.com
+                {props.email}
               </div>
 
               <button className="contact-me">WORK TOGETHER</button>
