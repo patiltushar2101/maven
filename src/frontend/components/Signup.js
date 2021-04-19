@@ -14,7 +14,9 @@ export default function Signup() {
   const history = useHistory()
 
   function addProftoDatabase() {
-    db.collection("Prof").doc(emailRef.current.value).set({
+    const ref = db.collection("Prof").doc()
+
+    ref.set({
       email: emailRef.current.value,
       name: "",
       university: "",
@@ -32,6 +34,9 @@ export default function Signup() {
         console.error("Error writing document: ", error);
       });
 
+    ref.update({
+      id: ref.id
+    });
   }
 
   async function handleSubmit(e) {

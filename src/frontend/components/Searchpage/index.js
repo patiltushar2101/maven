@@ -6,8 +6,9 @@ import { db } from "../../../firebase.js";
 function Searchpage(props) {
 
   const [dataList, setDataList] = useState([]);
-  const [searchText, setSearchText] = useState();
+  const [searchText, setSearchText] = useState(props.searchName);
   const [data, setData] = useState(dataList);
+
 
   useEffect(() => {
     db.collection("Prof").get().then((q) => {
@@ -120,7 +121,10 @@ function Searchpage(props) {
       <div className="box-container">
         {data.map((d, i) => {
           return (
-            <ProfileCard key={i} name={d.name} prof={d.name} about={d.about} exp={d.experience} address={d.university} mobile={d.email} email={d.email} />
+            <div>
+              {console.log(d.id)}
+              <ProfileCard key={i} id={d.id} name={d.name} prof={d.name} about={d.about} exp={d.experience} address={d.university} mobile={d.email} email={d.email} />
+            </div>
           );
         })}
         <div className="clearboth" />

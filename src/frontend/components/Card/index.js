@@ -11,7 +11,7 @@ export default function Card(props) {
         <div className="flip-card-back">
           <h1>{props.heading}</h1>
           <span>
-            {props.detail} <a href="/">Search</a>
+            {props.detail} <a href={"/Searchpage/" + props.heading}>Search</a>
           </span>
         </div>
       </div>

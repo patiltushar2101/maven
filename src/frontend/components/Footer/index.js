@@ -1,7 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
+import { useAuth } from '../../contexts/AuthContext'
+import { useHistory } from "react-router-dom"
 
 export default function Footer() {
+
+  const [error, setError] = useState("")
+  const { currentUser, logout } = useAuth()
+  const history = useHistory()
+
+  async function handleLogOut() {
+    setError("")
+
+    try {
+      await logout()
+      history.push("/")
+    } catch {
+      setError("Failed to log out")
+      alert(error);
+    }
+  }
+
+  function loginUI() {
+    if (currentUser)
+      return <a onClick={handleLogOut} href="/">
+        Logout
+            </a>
+    else
+      return <a href="/Login">
+        Faculty-Login
+            </a>
+  }
+
+
   return (
     <footer className="footer-distributed">
       <div className="footer-left">
@@ -18,7 +49,7 @@ export default function Footer() {
 
           <a href="/AboutUs">About</a>
 
-          <a href="/Login">Login</a>
+          {loginUI()}
 
           <a href="/ContactUs">Contact</a>
         </p>

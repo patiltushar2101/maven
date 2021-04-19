@@ -8,9 +8,8 @@ import "./styles.css"
 export default function Homepage(props) {
   return (
     <div className="AboutProf">
-      <h1>{props.match.params.searchName}</h1>
       <Header></Header>
-      <AboutProf></AboutProf>
+      <AboutProf searchName={props.match.params.searchName}></AboutProf>
       <Footer></Footer>
     </div>
   );

@@ -69,7 +69,7 @@ export default function ProfileCard(props) {
               </svg>
             </a>
 
-            <a href={'/AboutProf/' + props.name} className="btn-full">
+            <a href={'/AboutProf/' + props.id} className="btn-full">
               Full Profile
             </a>
           </div>
@@ -84,7 +84,6 @@ export default function ProfileCard(props) {
           <div className="card-content">
             <div className="card-subtitle">WORK EXPERIENCE</div>
 
-            {console.log(props.exp)}
             {props.exp && props.exp.map((d, i) => {
               return (
                 <div key={i} className="card-timeline">

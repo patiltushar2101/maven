@@ -14,14 +14,14 @@ export default function Bodyweb() {
 
         <Card
           image="https://i.ibb.co/BsC4TsP/Boy.png"
-          heading="Daiict"
-          detail="Welcome to DAIICT"
+          heading="NIRMA"
+          detail="Welcome to NIRMA"
         ></Card>
 
         <Card
           image="https://i.ibb.co/BsC4TsP/Boy.png"
-          heading="Daiict"
-          detail="Welcome to DAIICT"
+          heading="PDPU"
+          detail="Welcome to PDPU"
         ></Card>
 
         <Card
