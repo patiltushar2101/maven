@@ -12,8 +12,10 @@ import UpdateProfile from "./frontend/pages/UpdateProfile";
 import { BrowserRouter, Route } from "react-router-dom";
 import { AuthProvider } from "./frontend/contexts/AuthContext"
 import ForgotPassword from "./frontend/pages/ForgotPassword.js";
-import PrivateRoute from "./frontend/components/PrivateRoute.js"
-import SearchpageSimple from "./frontend/pages/SearchpageSimple"
+import PrivateRoute, { AdminRoute } from "./frontend/components/PrivateRoute.js";
+import SearchpageSimple from "./frontend/pages/SearchpageSimple";
+import admin from "./frontend/pages/admin";
+
 
 export default function App() {
   return (
@@ -30,6 +32,7 @@ export default function App() {
           <Route path="/Searchpage/:searchName" exact component={Searchpage} />
           <Route path="/AboutProf/:searchName" exact component={AboutProf} />
           <Route path="/forgot-password" exact component={ForgotPassword} />
+          <AdminRoute path="/admin" exact component={admin} />
           <PrivateRoute path="/update-profile" exact component={UpdateProfile} />
         </div>
       </AuthProvider>
