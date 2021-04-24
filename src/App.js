@@ -15,6 +15,7 @@ import ForgotPassword from "./frontend/pages/ForgotPassword.js";
 import PrivateRoute, { AdminRoute } from "./frontend/components/PrivateRoute.js";
 import SearchpageSimple from "./frontend/pages/SearchpageSimple";
 import admin from "./frontend/pages/admin";
+import ShowProfile from "./frontend/pages/ShowProfile"
 
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/forgot-password" exact component={ForgotPassword} />
           <AdminRoute path="/admin" exact component={admin} />
           <PrivateRoute path="/update-profile" exact component={UpdateProfile} />
+          <PrivateRoute path="/show-profile" exact component={ShowProfile} />
         </div>
       </AuthProvider>
     </BrowserRouter>

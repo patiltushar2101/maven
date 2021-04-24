@@ -13,11 +13,18 @@ import {
     ShowButton,
     EditButton,
     DeleteButton,
+    ReferenceInput,
+    SelectInput,
+    // ImageField,
+    // ImageInput
 } from "react-admin";
 
 const UserFilter = (props) => (
     <Filter {...props}>
-        <TextInput label="Search" source="title" alwaysOn />
+        <TextInput label="Search" source="email" alwaysOn />
+        <ReferenceInput label="name" source="id" reference="Prof" allowEmpty>
+            <SelectInput optionText="name" />
+        </ReferenceInput>
     </Filter>
 );
 
@@ -56,6 +63,7 @@ export const UserShow = (props) => (
             <TextField source="twitter" />
             <TextField source="linkedin" />
             <TextField source="instagram" />
+            {/* <ImageField source="img.src" alt="no-pic" /> */}
         </SimpleShowLayout>
     </Show>
 );
@@ -81,6 +89,9 @@ export const UserCreate = (props) => (
             <TextInput source="twitter" />
             <TextInput source="linkedin" />
             <TextInput source="instagram" />
+            {/* <ImageInput source="img" accept="image/*">
+                <ImageField source="img" />
+            </ImageInput> */}
         </SimpleForm>
     </Create>
 );
@@ -106,6 +117,9 @@ export const UserEdit = (props) => (
             <TextInput source="twitter" />
             <TextInput source="linkedin" />
             <TextInput source="instagram" />
+            {/* <ImageInput source="img" accept="image/*">
+                <ImageField source="Profile.jpg" />
+            </ImageInput> */}
         </SimpleForm>
     </Edit>
 );

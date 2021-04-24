@@ -26,6 +26,15 @@ export default function Signup() {
       experience: [],
       publication: [],
       courses: [],
+      about: "",
+      address: "",
+      facebook: "",
+      instagram: "",
+      linkedin: "",
+      twitter: "",
+      researchwork: "",
+      year: "",
+      img: ""
     })
       .then(() => {
         console.log("Document successfully written!");
