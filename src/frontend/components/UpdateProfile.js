@@ -308,18 +308,20 @@ export default function UpdateProfile() {
       })
     }
 
-    firebase.storage().ref('Prof/' + currentUser.uid + '/Profile.jpg').put(img).then(() => {
-      promises.push(true);
-      console.log("profile picture uploaded")
-      firebase.storage().ref('Prof/' + currentUser.uid + '/Profile.jpg').getDownloadURL().then(x => {
-        setImgUrl(x)
-        console.log("after upload: ", x)
+    if (img) {
+      firebase.storage().ref('Prof/' + currentUser.uid + '/Profile.jpg').put(img).then(() => {
+        promises.push(true);
+        console.log("profile picture uploaded")
+        firebase.storage().ref('Prof/' + currentUser.uid + '/Profile.jpg').getDownloadURL().then(x => {
+          setImgUrl(x)
+          console.log("after upload: ", x)
+        })
+      }).catch((error) => {
+        promises.push(false);
+        setError(error.message)
+        console.error(error.message)
       })
-    }).catch((error) => {
-      promises.push(false);
-      setError(error.message)
-      console.error(error.message)
-    })
+    }
 
     Promise.all(promises)
       .then(() => {
