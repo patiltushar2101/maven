@@ -95,7 +95,6 @@ function Searchpage(props) {
   return (
     <div className="search">
       <input
-        className="form-control"
         type="search"
         placeholder={" Type to search..."}
         value={searchText}

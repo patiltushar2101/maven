@@ -16,6 +16,7 @@ import PrivateRoute, { AdminRoute } from "./frontend/components/PrivateRoute.js"
 import SearchpageSimple from "./frontend/pages/SearchpageSimple";
 import admin from "./frontend/pages/admin";
 import ShowProfile from "./frontend/pages/ShowProfile"
+import addExp from "./frontend/pages/addExp"
 
 
 export default function App() {
@@ -36,6 +37,7 @@ export default function App() {
           <AdminRoute path="/admin" exact component={admin} />
           <PrivateRoute path="/update-profile" exact component={UpdateProfile} />
           <PrivateRoute path="/show-profile" exact component={ShowProfile} />
+          <PrivateRoute path="/add-exp" exact component={addExp} />
         </div>
       </AuthProvider>
     </BrowserRouter>
