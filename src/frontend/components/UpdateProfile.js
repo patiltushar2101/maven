@@ -493,7 +493,7 @@ export default function UpdateProfile() {
               as="textarea"
               raw={5}
               onChange={(e) => { setAddress(e.target.value) }}
-              value={address || "Address"}
+              value={address}
             />
           </Form.Group>
 
