@@ -212,7 +212,7 @@ export default function UpdateProfile() {
       });
 
     db.collection('Prof').doc(user.id).update({
-      publication: [publication1, publication2, publication3]
+      publication: [publication1 || "", publication2 || "", publication3 || ""]
     })
       .then(() => {
         promises.push(true);
