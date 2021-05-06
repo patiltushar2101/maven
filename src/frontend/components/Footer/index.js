@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="footer-center">
         <div>
           <p>
-            <span>444 S. Cedros Ave</span> Solana Beach, California
+            <span>DAIICT</span> Gandhinagar,Gujarat.
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export default function Footer() {
 
         <div>
           <p>
-            <a href="mailto:support@company.com">support@company.com</a>
+            <a href="mailto:201801057@daiict.ac.in">support@maven.com</a>
           </p>
         </div>
       </div>
@@ -79,8 +79,7 @@ export default function Footer() {
       <div className="footer-right">
         <p className="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
-          euismod convallis velit, eu auctor lacus vehicula sit amet.
+          To provide details of faculties and staffs of different universities.
         </p>
 
         <div className="footer-icons">
