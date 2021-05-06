@@ -14,12 +14,7 @@ export default function Contact() {
           <div
             id="mainContent"
           >
-            <form
-              name="contentForm"
-              encType="multipart/form-data"
-              method="post"
-              action="/contact-us/index.stml"
-            >
+            <form action="mailto:201801057@daiict.ac.in" method="post" encType="text/plain">
               <div className="contactForm">
                 <div>
                   <div>
@@ -28,7 +23,7 @@ export default function Contact() {
                         First Name
                       </label>
                       <input
-                        name="firstName"
+                        name="Firstname"
                         id="firstName"
                         className="form-control"
                         placeholder="FIRST NAME"
@@ -41,7 +36,7 @@ export default function Contact() {
                         Last Name
                       </label>
                       <input
-                        name="lastname"
+                        name="Lastname"
                         id="c_lastname"
                         className="form-control"
                         placeholder="LAST NAME"
@@ -85,7 +80,7 @@ export default function Contact() {
                         Your Message
                       </label>
                       <textarea
-                        name="comments"
+                        name="message"
                         rows="5"
                         id="comments"
                         className="form-control"
@@ -95,7 +90,7 @@ export default function Contact() {
                     </div>
                     <input
                       type="submit"
-                      value="SUBMIT"
+                      value="Send"
                       className="btn btn-primary mt-2 mb-4"
                     />
                   </div>
@@ -112,7 +107,7 @@ export default function Contact() {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.497563754517!2d72.62677371497078!3d23.188530984869374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395c2a3c9618d2c5%3A0xc54de484f986b1fa!2sDA-IICT!5e0!3m2!1sen!2sin!4v1616443820014!5m2!1sen!2sin"
                 width="600"
                 height="450"
-                allowFullScreen="true"
+                allowFullScreen={true}
                 loading="lazy"
                 title="map"
                 className="map"

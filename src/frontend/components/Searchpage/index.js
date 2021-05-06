@@ -121,9 +121,9 @@ function Searchpage(props) {
       <div className="box-container">
         {data.map((d, i) => {
           return (
-            <div>
+            <div key={i}>
               {console.log(d.id)}
-              <ProfileCard key={i} id={d.id} name={d.name}
+              <ProfileCard id={d.id} name={d.name}
                 prof={d.university} about={d.about} exp={d.experience}
                 address={d.university} contact={d.contact}
                 email={d.email} year={d.year}
