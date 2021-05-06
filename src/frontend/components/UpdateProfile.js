@@ -385,7 +385,7 @@ export default function UpdateProfile() {
               }
               type="text"
               onChange={(e) => { setName(e.target.value) }}
-              defaultValue={name}
+              value={name}
             />
           </FormControl>
 
