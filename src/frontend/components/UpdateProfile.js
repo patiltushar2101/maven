@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
-import { Form, Alert } from "react-bootstrap"
+import { Form, Alert, FormLabel } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { useHistory } from "react-router-dom"
 import { db } from '../../firebase.js';
@@ -488,6 +488,7 @@ export default function UpdateProfile() {
           />
 
           <Form.Group id="address" style={{ margin: "20px" }}>
+            <FormLabel>Address:</FormLabel>
             <Form.Control
               style={{ height: "100px" }}
               as="textarea"
