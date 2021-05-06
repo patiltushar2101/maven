@@ -280,119 +280,121 @@ export default function ProfileCard(props) {
             </div>
           </div>
 
-          <div className="card-buttons">
-            <button
-              data-section="#about"
-              onClick={() => {
-                setA(true);
-                setE(false);
-                setC(false);
-                setAc(false);
-                setCr(false);
-                setP(false);
-                setS(false);
-              }}
-              className={a ? "is-active" : ""}
-            >
-              ABOUT
+
+        </div>
+
+        <div className="card-buttons">
+          <button
+            data-section="#about"
+            onClick={() => {
+              setA(true);
+              setE(false);
+              setC(false);
+              setAc(false);
+              setCr(false);
+              setP(false);
+              setS(false);
+            }}
+            className={a ? "is-active" : ""}
+          >
+            ABOUT
             </button>
 
-            <button
-              data-section="#experience"
-              onClick={() => {
-                setA(false);
-                setE(true);
-                setC(false);
-                setAc(false);
-                setCr(false);
-                setP(false);
-                setS(false);
-              }}
-              className={e ? "is-active" : ""}
-            >
-              EXPERIENCE
+          <button
+            data-section="#experience"
+            onClick={() => {
+              setA(false);
+              setE(true);
+              setC(false);
+              setAc(false);
+              setCr(false);
+              setP(false);
+              setS(false);
+            }}
+            className={e ? "is-active" : ""}
+          >
+            EXPERIENCE
             </button>
 
-            <button
-              data-section="#courses"
-              onClick={() => {
-                setA(false);
-                setE(false);
-                setC(false);
-                setAc(false);
-                setCr(true);
-                setP(false);
-                setS(false);
-              }}
-              className={cr ? "is-active" : ""}
-            >
-              COURSES
+          <button
+            data-section="#courses"
+            onClick={() => {
+              setA(false);
+              setE(false);
+              setC(false);
+              setAc(false);
+              setCr(true);
+              setP(false);
+              setS(false);
+            }}
+            className={cr ? "is-active" : ""}
+          >
+            COURSES
             </button>
 
-            <button
-              data-section="#specialization"
-              onClick={() => {
-                setA(false);
-                setE(false);
-                setC(false);
-                setAc(false);
-                setCr(false);
-                setP(false);
-                setS(true);
-              }}
-              className={s ? "is-active" : ""}
-            >
-              SPECIALIZATIONS
+          <button
+            data-section="#specialization"
+            onClick={() => {
+              setA(false);
+              setE(false);
+              setC(false);
+              setAc(false);
+              setCr(false);
+              setP(false);
+              setS(true);
+            }}
+            className={s ? "is-active" : ""}
+          >
+            SPECIALIZATIONS
             </button>
 
-            <button
-              data-section="#publications"
-              onClick={() => {
-                setA(false);
-                setE(false);
-                setC(false);
-                setAc(false);
-                setCr(false);
-                setP(true);
-                setS(false);
-              }}
-              className={p ? "is-active" : ""}
-            >
-              PUBLICATIONS
+          <button
+            data-section="#publications"
+            onClick={() => {
+              setA(false);
+              setE(false);
+              setC(false);
+              setAc(false);
+              setCr(false);
+              setP(true);
+              setS(false);
+            }}
+            className={p ? "is-active" : ""}
+          >
+            PUBLICATIONS
             </button>
 
-            <button
-              data-section="#achievements"
-              onClick={() => {
-                setA(false);
-                setE(false);
-                setC(false);
-                setAc(true);
-                setCr(false);
-                setP(false);
-                setS(false);
-              }}
-              className={ac ? "is-active" : ""}
-            >
-              ACHIEVEMENTS
+          <button
+            data-section="#achievements"
+            onClick={() => {
+              setA(false);
+              setE(false);
+              setC(false);
+              setAc(true);
+              setCr(false);
+              setP(false);
+              setS(false);
+            }}
+            className={ac ? "is-active" : ""}
+          >
+            ACHIEVEMENTS
             </button>
 
-            <button
-              data-section="#contact"
-              onClick={() => {
-                setA(false);
-                setE(false);
-                setC(true);
-                setAc(false);
-                setCr(false);
-                setP(false);
-                setS(false);
-              }}
-              className={c ? "is-active" : ""}
-            >
-              CONTACT
+          <button
+            data-section="#contact"
+            onClick={() => {
+              setA(false);
+              setE(false);
+              setC(true);
+              setAc(false);
+              setCr(false);
+              setP(false);
+              setS(false);
+            }}
+            className={c ? "is-active" : ""}
+          >
+            CONTACT
             </button>
-          </div>
         </div>
       </div>
     </div >

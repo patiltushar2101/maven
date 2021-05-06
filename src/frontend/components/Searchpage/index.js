@@ -123,7 +123,13 @@ function Searchpage(props) {
           return (
             <div>
               {console.log(d.id)}
-              <ProfileCard key={i} id={d.id} name={d.name} prof={d.name} about={d.about} exp={d.experience} address={d.university} contact={d.contact} email={d.email} />
+              <ProfileCard key={i} id={d.id} name={d.name}
+                prof={d.university} about={d.about} exp={d.experience}
+                address={d.university} contact={d.contact}
+                email={d.email} year={d.year}
+                facebook={d.facebook} instagrm={d.instagrm}
+                twitter={d.twitter} linkedin={d.linkedin}
+              />
             </div>
           );
         })}
