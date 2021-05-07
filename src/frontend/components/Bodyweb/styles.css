@@ -8,13 +8,23 @@
   height: 100%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap');
 .popular{
   color: #131313;
-  background-color: #e7e5e4;
   letter-spacing: .15em;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Rouge Script', cursive;
   text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777;
 }
+
+
+.popular-prof{
+  color: #131313;
+  margin-top: 5rem;
+  letter-spacing: .15em;
+  font-family: 'Rouge Script', cursive;
+  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474, -3px 6px 1px #787777;
+}
+
 
 .flex-container {
   display: flex;

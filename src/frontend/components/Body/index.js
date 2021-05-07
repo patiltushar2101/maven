@@ -18,7 +18,7 @@ export default function Body() {
         </a>
       </div>
       <div className="body-photo">
-        <img src="https://i.ibb.co/BsC4TsP/Boy.png" alt="pic"></img>
+        <img src="https://i.ibb.co/wh4b3nJ/Boy.png" alt="pic"></img>
       </div>
       <div className="discription-bottom">
         <p>
