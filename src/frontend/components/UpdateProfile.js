@@ -86,6 +86,7 @@ export default function UpdateProfile() {
   const [publication1, setPublication1] = useState(user.publication[0]);
   const [publication2, setPublication2] = useState(user.publication[1]);
   const [publication3, setPublication3] = useState(user.publication[2]);
+  const [id, setId] = useState(user.id);
 
   useEffect(() => {
     db.collection("Prof").where("email", "==", currentUser.email).get().then((querySnapshot) => {
@@ -114,6 +115,7 @@ export default function UpdateProfile() {
     setPublication1(user.publication[0]);
     setPublication2(user.publication[1]);
     setPublication3(user.publication[2]);
+    setId(user.id);
   }, [user.id]);
 
   function handleSubmit(e) {
@@ -137,7 +139,7 @@ export default function UpdateProfile() {
         console.error(error.message)
       })
     }
-
+    console.log(user.id)
     db.collection('Prof').doc(user.id).update({
       about: about
     })
@@ -369,6 +371,7 @@ export default function UpdateProfile() {
     <div className="d-flex flex-wrap justify-content-center" style={{
       margin: "30px"
     }}>
+      {console.log(user)}
       <div className="border border-secondary" style={{ minWidth: "0" }}>
         <h2 className="text-center mb-5 pb-3 pt-2 mt-3 bg-secondary">Update Profile</h2>
         {error && <Alert variant="danger">{error}</Alert>}
@@ -751,7 +754,7 @@ export default function UpdateProfile() {
               }
               type="url"
               onChange={(e) => { setLinkedin(e.target.value) }}
-              defaultValue={user.linkedin}
+              value={linkedin}
             />
           </FormControl>
 

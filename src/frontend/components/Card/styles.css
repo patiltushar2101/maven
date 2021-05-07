@@ -29,6 +29,8 @@
 .flip-card-back h1 {
   background-color: #fff;
   color: #000;
+  overflow: auto;
+  max-height: 100px;
 }
 
 .flip-card-back a {
@@ -61,14 +63,15 @@
 
 /* Style the back side */
 .flip-card-back {
-  background: rgb(132,250,246);
-background: linear-gradient(90deg, rgba(132,250,246,1) 16%, rgba(96,208,235,1) 66%, rgba(207,194,255,1) 100%);
+  background: rgb(168,168,168);
+background: linear-gradient(90deg, rgba(168,168,168,1) 4%, rgba(107,107,107,1) 66%, rgba(85,85,85,1) 96%);
   color: white;
   transform: rotateY(180deg);
 }
 
-@media (max-width: 600px) {
-  .flip-card-back span {
-    font-size: 10vw;
+
+@media(max-width: 600px) {
+  .flip-card-back h1 {
+    max-height: 50px;
   }
 }

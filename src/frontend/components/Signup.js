@@ -17,9 +17,10 @@ export default function Signup() {
 
   function addProftoDatabase() {
     const ref = db.collection("Prof").doc()
+    const profemail = emailRef.current.value.toLowerCase();
 
     ref.set({
-      email: emailRef.current.value,
+      email: profemail,
       name: "",
       university: "",
       achievements: [],
