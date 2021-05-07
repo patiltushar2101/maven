@@ -14,7 +14,7 @@ export default function Bodyweb() {
         ></Card>
 
         <Card
-          image="https://i.ibb.co/5x8pqdS/Nirma-University-Logo.png"
+          image="https://i.ibb.co/2qCdVy8/Nirma-University-1.jpg"
           heading="NIRMA"
           detail="Welcome to NIRMA"
         ></Card>

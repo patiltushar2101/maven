@@ -1,5 +1,7 @@
 .card-cover {
-  background-image: url("https://2.bp.blogspot.com/-b_lqelKRB4k/Xj-rBvoSxUI/AAAAAAAACHg/G19lzRiO6qYQmquCqut44r1cMdF53HQ0QCLcBGAsYHQ/s1600/anime3.png");
+  background: rgb(93,255,250);
+background: linear-gradient(90deg, rgba(93,255,250,1) 16%, rgba(96,208,235,1) 55%, rgba(126,92,252,1) 100%);
+  /* background-image: url("https://2.bp.blogspot.com/-b_lqelKRB4k/Xj-rBvoSxUI/AAAAAAAACHg/G19lzRiO6qYQmquCqut44r1cMdF53HQ0QCLcBGAsYHQ/s1600/anime3.png"); */
 }
 
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap");
