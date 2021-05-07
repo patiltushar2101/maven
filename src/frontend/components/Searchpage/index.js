@@ -86,7 +86,7 @@ function Searchpage(props) {
     if (lowercasedValue === "university") setData(dataList);
     else {
       const filteredData = dataList.filter(item => {
-        return item.name === value;
+        return item.courses && item.courses.includes(value);
       });
       setData(filteredData);
     }
@@ -101,24 +101,24 @@ function Searchpage(props) {
         value={searchText}
         onChange={e => handleChange(e.target.value)}
       />
-      <div className="all-input">
+      <div className="all-input d-flex justify-content-center">
         <select name="university" id="university" className="input-university filter" onChange={e => handleUniChange(e.target.value)}>
           <option defaultValue="university">university</option>
-          <option value="true red">DAIICT</option>
-          <option value="cerulean">NIRMA</option>
+          <option value="DAIICT">DAIICT</option>
+          <option value="NIRMA">NIRMA</option>
         </select>
         <select name="location" id="location" className="input-location filter" onChange={e => handleLocChange(e.target.value)}>
           <option defaultValue="location">location</option>
-          <option value="Gujarat">Gujarat</option>
-          <option value="Maharastra">Maharastraaaaaaaa</option>
+          <option value="INDIA">Gujarat</option>
+          <option value="Maharastra">Maharastra</option>
         </select>
         <select name="course" id="course" className="input-course filter" onChange={e => handleCourseChange(e.target.value)}>
           <option defaultValue="course">course</option>
           <option value="software">software</option>
-          <option value="maths">maths</option>
+          <option value="math">math</option>
         </select>
       </div>
-      <div className="box-container">
+      <div className="box-container" className="d-flex justify-content-center flex-wrap min-vh-100">
         {data.map((d, i) => {
           return (
             <div key={i}>
@@ -133,8 +133,7 @@ function Searchpage(props) {
             </div>
           );
         })}
-        <div className="clearboth" />
-        {data.length === 0 && <img src="https://i.ibb.co/fp04h1b/no-record-found.jpg" alt="no-record-found" border="0"></img>}
+        {data.length === 0 && <div className="loader">HI</div>}
       </div>
     </div>
   );

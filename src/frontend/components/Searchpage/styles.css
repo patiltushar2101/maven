@@ -11,3 +11,42 @@
     justify-content: center;
   }
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+.loader{
+    position: absolute;
+    top: 70%;   left: 50%;
+    transform: translate(-50%,-50%);
+    width: 200px;  height: 200px;
+    border: 10px solid #fff;
+    border-color: #ccc transparent #01a2ff transparent;
+    border-radius: 50%;
+    animation: animate 2s infinite linear;
+}
+.loader::before,.loader::after{
+    content: '';
+    position: absolute;
+    top: 50%;   left: 50%;
+    transform: translate(-50%,-50%);
+    border: 10px solid #fff;
+    border-radius: 50%;
+    animation: animate 1.8s infinite linear;
+}
+.loader::before{
+    width: 60%;  height: 60%;
+    border-color: #a8a8a8 transparent #3498db transparent;
+}
+.loader::after{
+    width: 30%;  height: 30%;
+    border-color: #2fc2e7 transparent #7f8c8d transparent;
+    animation-duration: 1.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}

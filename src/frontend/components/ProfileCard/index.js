@@ -45,7 +45,7 @@ export default function ProfileCard(props) {
             <div className="card-subtitle">ABOUT</div>
 
             <p className="card-desc">
-              {props.about}
+              {props.about || `Hi, I am ${props.name}`}
             </p>
           </div>
 

@@ -23,8 +23,8 @@
   width: 300px;
   box-shadow: -2px -2px 15px rgba(0, 0, 0, 0.705);
 
-  margin: 20px;
-  height: 480px;
+  margin: 3rem;
+  height: 410px;
   overflow-y: auto;
 
   position: relative;
