@@ -31,11 +31,11 @@ import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const options = ['DAIICT', 'NIRMA', 'PDPU', 'MIT', 'ABC'];
 
-const allSpecialization = ['math', 'software', 'development', 'engineer', 'tech', 'managment', 'biology']
+const allSpecialization = ['English', 'Science', 'Social Sciences', 'Physical Education', 'Arts', 'History', 'Philosophy', 'Anthropology', 'Chemistry', 'Agriculture', 'Business', 'Health Sciences', 'Law', 'Social Work', 'Physics', 'Statistics', 'Archaeology', 'Economics', 'Geography', 'Languages and linguistics', 'math', 'software', 'development', 'engineer', 'tech', 'managment', 'biology']
 
 const allAchi = ['achi1', 'achi2', 'achi3', 'achi4', 'achi5', 'achi6', 'achi7']
 
-const allCourses = ['math', 'software', 'development', 'engineer', 'tech', 'managment', 'biology']
+const allCourses = ['English', 'Science', 'Social Sciences', 'Physical Education', 'Arts', 'History', 'Philosophy', 'Anthropology', 'Chemistry', 'Agriculture', 'Business', 'Health Sciences', 'Law', 'Social Work', 'Physics', 'Statistics', 'Archaeology', 'Economics', 'Geography', 'Languages and linguistics', 'math', 'software', 'development', 'engineer', 'tech', 'managment', 'biology']
 
 export default function UpdateProfile() {
 
